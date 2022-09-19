@@ -1,0 +1,4 @@
+_target_: peer_x.data.data_module.DataModule
+
+data_dir: ${work_dir}/dataset/raw/
+batch_size: 8

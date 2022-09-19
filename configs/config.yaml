@@ -1,0 +1,23 @@
+# @package _global_
+
+defaults:
+    - logger: tensorboard
+    - datamodule: MoNuSeg
+    - trainer: default
+
+    # enable color logging
+    - override hydra/hydra_logging: colorlog
+
+# global configurations
+is_training_mode: true
+experiment_name: default
+gpus: [0]
+lr: 1e-5
+epochs: 5
+work_dir: ${hydra:runtime.cwd}
+
+# Hydra configuration
+hydra:
+    # output paths for hydra logs
+    run:
+        dir: logs/runs/${now:%Y-%m-%d}/${now:%H:%M:%S}/${hydra.job.override_dirname}
