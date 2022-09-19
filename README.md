@@ -28,6 +28,11 @@ To run post-processing pipeline
 poetry run python scripts/post_processing_pipeline.py
 ```
 
+Outputs will be saved in:
+```markdown
+dataset/processed/{experiment_name}/
+```
+
 ## Start TensorBoard server
 ```bash
 poetry run tensorboard --logdir=./logs/tensorboard/ --port=8888
