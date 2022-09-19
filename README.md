@@ -20,13 +20,16 @@ poetry run python main.py
 ```
 
 ## Post processing
-Post-processing outputs
+Assumes `.png` files are stored inside: `dataset/raw/MoNuSeg/images/`
+and `.npz` files under: `dataset/raw/MoNuSeg/model_output/MoNuSeg_1000x1000/data_raw/` 
+
+To run post-processing pipeline
 ```bash
 poetry run python scripts/post_processing_pipeline.py
 ```
 
 ## Start TensorBoard server
 ```bash
-poetry run tensorboard --logdir=./logs --port=8888
+poetry run tensorboard --logdir=./logs/tensorboard/ --port=8888
 # Open in web browser: http://127.0.0.1:8888
 ```
