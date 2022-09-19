@@ -1,0 +1,21 @@
+# @package _global_
+
+defaults:
+    # enable color logging
+    - override hydra/hydra_logging: colorlog
+
+# global configurations
+work_dir: ${hydra:runtime.cwd}
+experiment_name: MoNuSeg1000x1000
+glob_image_dir: "${work_dir}/dataset/raw/MoNuSeg/images/*.png"
+glob_model_output_dir: "${work_dir}/dataset/raw/MoNuSeg/model_output/MoNuSeg_1000x1000/data_raw/*.npz"
+processed_output_dir: "${work_dir}/dataset/processed/${experiment_name}/"
+
+# Hydra configuration
+hydra:
+    # output paths for hydra logs
+    run:
+        dir: logs/${experiment_name}/${now:%Y-%m-%d}/${now:%H:%M:%S}/
+    job:
+        chdir: false
+
