@@ -1,4 +1,6 @@
 # peer-x
+PyTorch-Lightning - Poetry - tox - RTD docs - GitHub actions
+
 
 ## Pre-requisite
 1. Install [poetry](https://python-poetry.org/docs/):
